@@ -1,42 +1,28 @@
 ### 삽입 정렬
    - 앞의 데이터를 정렬 해가면서 삽입 위치를 찾아 정렬하는 방식
    - 알고리즘 복잡도 O(N^2)
-```java  
-package Sort_hw;
-
-public class InsertionSort {
-	public static void main(String[] args) {
-		int[] a = { 2, 12, 7, 6, 5, 17, 3 };
-		insertSort(true, a);
-		for (int i : a) {
-			System.out.print(i + " ");
+   ```java
+   public static void insertionSort(int[] arr, boolean orderBy) {
+	for (int i = 1; i < arr.length; i++) {
+	    for (int j = i; j > 0; j--) {
+		if (orderBy) {
+		    if (arr[j] < arr[j - 1]) {
+			int temp = arr[j];
+			arr[j] = arr[j - 1];
+			arr[j - 1] = temp;
+		    } else {
+			break; // 앞의 데이터들은 이미 정렬이 되있으므로 if에 걸리지 않으면 더이상 비교할 필요가 없으므로 break로 빠져 나감
+		    }
+		} else {
+		    if (arr[j] > arr[j - 1]) {
+			int temp = arr[j];
+			arr[j] = arr[j - 1];
+			arr[j - 1] = temp;
+		    } else {
+			break; // 앞의 데이터들은 이미 정렬이 되있으므로 if에 걸리지 않으면 더이상 비교할 필요가 없으므로 break로 빠져 나감
+		    }
 		}
+	    }
 	}
-
-	public static void insertSort(boolean isAscending, int... num) {
-		int temp;
-		if (isAscending) {	
-			for (int i = 0; i < num.length - 1; i++) {
-				for (int j = i + 1; j < num.length; j++) {
-					if (num[i] > num[j]) {	
-						temp = num[i];	
-						num[i] = num[j];	
-						num[j] = temp;	
-					}
-				}
-			}
-		} else {	
-			for (int i = 0; i < num.length - 1; i++) {
-				for (int j = i + 1; j < num.length; j++) {
-					if (num[i] < num[j]) {
-						temp = num[i];
-						num[i] = num[j];
-						num[j] = temp;
-					}
-				}
-			}
-		}
-	}
-}
-
-```  
+   }
+   ```
