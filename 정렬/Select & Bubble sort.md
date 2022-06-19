@@ -87,25 +87,5 @@
              }         
 	  }
 	  System.out.println();
-      }
-	
-    
-	
-    public static void main(String[] args) {
-        VararagsTest test = new VararagsTest();
-        System.out.println("=====[오름선택정렬]=====");
-        test.AsselectionSort(50,60,80,11,123,455,124,1411,13);
-        System.out.println();
-	System.out.println("=====[내림선택정렬]=====");
-	test.DeselectionSort(50,60,80,11,123,455,124,1411,13);
-		
-	System.out.println();
-	System.out.println("=====[오름버블정렬]=====");
-	test.AsbubbleSort(50,60,80,11,123,455,124,1411,13);
-        System.out.println();
-        System.out.println("=====[내림버블정렬]=====");
-	test.DebubbleSort(50,60,80,11,123,455,124,1411,13);    
-		
-		
-     }
+    }
    ```
