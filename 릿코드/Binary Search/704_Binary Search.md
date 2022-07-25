@@ -1,4 +1,5 @@
 ### 704 Binary Search
+  - 오름차순으로 정렬된 배열에서 target 값의 index를 찾아라
   - java code
   ```java
     public int search(int[] nums, int target) {
