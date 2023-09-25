@@ -20,12 +20,12 @@
           for (int i = 0; i < R; i++) {
               for (int j = 0; j < C; j++) {
                   if (grid[i][j] == 2) {
-                      dfs(i, j, 2, grid);
+                      dfs(i, j, 2, grid); // 이미 grid에서 0, 1, 2를 사용하고 있기 때문에 time 값을 2부터 시작
                   }
               }
           }
   
-          int result = 0;
+          int result = 2; // 방문하지 못 한곳을 제외한 나머지는 최소 값이 2 이기 때문에 결과 값을 2로 시작
           for (int i = 0; i < R; i++) {
               for (int j = 0; j < C; j++) {
                   if (grid[i][j] == 1) {
@@ -36,7 +36,7 @@
               }
           }
   
-          return result - 2;
+          return result - 2; // 2로 시작했던 부분을 빼 줌
       }
   
       public static void dfs(int row, int col, int time, int[][] grid) {
@@ -46,6 +46,7 @@
   
               if (nextRow < 0 || nextRow >= R || nextCol < 0 || nextCol >= C) continue;
               if (grid[nextRow][nextCol] == 0) continue;
+              // 다음으로 탐색할 곳이 시간 + 1 한 값 보다 작으면 재탐색
               if (grid[nextRow][nextCol] < time + 1 && grid[nextRow][nextCol] > 1) continue;
   
               grid[nextRow][nextCol] = time + 1;
