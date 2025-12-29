@@ -1,5 +1,5 @@
-### 삽입 정렬
-   - 앞의 데이터를 정렬 해가면서 삽입 위치를 찾아 정렬하는 방식
+### 삽입 sort
+   - 앞의 데이터를 sort 해가면서 삽입 위치를 찾아 정렬하는 방식
    - 알고리즘 복잡도 O(N^2)
    ```java
    public static void insertionSort(int[] arr, boolean orderBy) {

@@ -14,7 +14,7 @@
             int end = command[1];
             int idx = command[2] - 1;
             
-            // 배열을 start ~ end까지 잘라서 정렬 후 배열에 카피
+            // 배열을 start ~ end까지 잘라서 sort 후 배열에 카피
             int[] arr = Arrays.stream(Arrays.copyOfRange(array, start, end)).sorted().toArray();
             // 배열의 idx번째 수를 answer에 넣어 줌
             answer[cnt] = arr[idx];
