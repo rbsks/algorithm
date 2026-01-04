@@ -11,9 +11,6 @@ import java.util.StringTokenizer;
 
 public class Main {
 
-    /**
-     * https://www.acmicpc.net/problem/10814
-     */
     public static class PersonInfo {
         private final int age;
         private final String name;
@@ -32,6 +29,9 @@ public class Main {
         }
     }
 
+    /**
+     * https://www.acmicpc.net/problem/10814
+     */
     public static void main(String[] args) throws Exception {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
